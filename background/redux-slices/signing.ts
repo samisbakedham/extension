@@ -11,11 +11,23 @@ import { createBackgroundAsyncThunk } from "./utils"
 import { EnrichedSignTypedDataRequest } from "../services/enrichment"
 import { EIP712TypedData } from "../types"
 import { AddressOnNetwork } from "../accounts"
+import { EIP1559TransactionRequest } from "../networks"
 
 type SignOperation<T> = {
   request: T
   signingMethod: SigningMethod
 }
+
+export type SigningRequest =
+  | {
+      // FIXME Consider unifying with SignOperation.
+      transactionRequest: EIP1559TransactionRequest
+      broadcastOnSign: boolean
+    }
+  | {
+      // FIXME Consider subtypes of SignOperation instead of SignOperation<T>.
+      signingOperation: SignOperation<SignDataRequest | SignTypedDataRequest>
+    }
 
 type Events = {
   requestSignTypedData: {
