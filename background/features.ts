@@ -7,3 +7,5 @@ export const RESOLVE_RNS_NAMES = process.env.RESOLVE_RNS_NAMES === "true"
 export const MULTI_NETWORK = process.env.MULTI_NETWORK === "true"
 export const CUSTOM_GAS_SELECT = process.env.CUSTOM_GAS_SELECT === "true"
 export const HIDE_TOKEN_FEATURES = process.env.HIDE_TOKEN_FEATURES === "true"
+export const USE_UPDATED_SIGNING_UI =
+  process.env.USE_UPDATED_SIGNING_UI === "true"
