@@ -24,6 +24,7 @@ import { AssetTransfer } from "../../assets"
 import {
   HOUR,
   ETHEREUM,
+  CANDLE,
   POLYGON,
   ARBITRUM_ONE,
   OPTIMISM,
@@ -31,6 +32,7 @@ import {
 import {
   SUPPORT_ARBITRUM,
   SUPPORT_OPTIMISM,
+  SUPPORT_CANDLE,
   SUPPORT_POLYGON,
   USE_MAINNET_FORK,
 } from "../../features"

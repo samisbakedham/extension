@@ -1,6 +1,13 @@
 import { EVMNetwork, Network } from "../networks"
 import { BTC, ETH, MATIC } from "./currencies"
 
+export const CANDLE: EVMNetwork = {
+  name: "Candle",
+  baseAsset: CNDL,
+  chainID: "534",
+  family: "EVM",
+}
+
 export const ETHEREUM: EVMNetwork = {
   name: "Ethereum",
   baseAsset: ETH,

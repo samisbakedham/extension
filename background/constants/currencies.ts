@@ -23,6 +23,18 @@ export const CNY: FiatCurrency = {
 
 export const FIAT_CURRENCIES = [USD, EUR, CNY]
 
+export const CNDL: FungibleAsset & CoinGeckoAsset & NetworkBaseAsset = {
+  name: "Candle",
+  symbol: "CNDL",
+  decimals: 18,
+  coinType: coinTypesByAssetSymbol.CNDL,
+  metadata: {
+    coinGeckoID: "candle",
+    tokenLists: [],
+    websiteURL: "https://cndlchain.com",
+  },
+}
+
 export const ETH: FungibleAsset & CoinGeckoAsset & NetworkBaseAsset = {
   name: "Ether",
   symbol: "ETH",
@@ -59,7 +71,7 @@ export const BTC: FungibleAsset & CoinGeckoAsset & NetworkBaseAsset = {
   },
 }
 
-export const BASE_ASSETS = [ETH, BTC, ...(SUPPORT_POLYGON ? [MATIC] : [])]
+export const BASE_ASSETS = [ETH, BTC, ...(SUPPORT_POLYGON ? [MATIC] : []),  ...(SUPPORT_CANDLE ? [CNDL] : [])]
 
 export const BASE_ASSETS_BY_SYMBOL = BASE_ASSETS.reduce<{
   [assetSymbol: string]: FungibleAsset & CoinGeckoAsset & NetworkBaseAsset
